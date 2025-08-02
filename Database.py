@@ -31,4 +31,4 @@ for entry in dictionary:
     print(entry['CityName'])
 
 #-------------------Data Analysis------------------#
-#Questtions to be answered:
+#Questions to be answered:
