@@ -25,6 +25,10 @@ print(headers)
 dictionary = []
 for entry in entries:
     dictionary.append(dict(zip(headers, entry)))
+    
+#example output
+for entry in dictionary:
+    print(entry['CityName'])
 
 #-------------------Data Analysis------------------#
 #Questtions to be answered:
