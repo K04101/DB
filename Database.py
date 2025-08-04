@@ -6,6 +6,9 @@
 #------------------Data Reading and Processing------------------#
 #First I will open the data file in read mode(r) and read the data.
 # I will use utf-8-sig encoding to remove the BOM (Byte Order Mark) issues.
+from itertools import count
+
+
 with open('file.txt', 'r', encoding='utf-8-sig') as file:
     f = file.readlines()
 
@@ -43,8 +46,10 @@ def count_countries_ending_with_a(dictionary):
         if country.endswith('a') and country not in countryset:
             countryset.add(country)
             count += 1
-
+    print(f"Number of countries ending with 'a': {count}")
     return count
+
+count_countries_ending_with_a(dictionary)
 
 #-------------------------------------------------------------------------------------------------------------
 
@@ -79,7 +84,7 @@ def cityPop(dictionary):
 
 #-------------------------------------------------------------------------------------------------------------
 
-#C List the five countries that have the largest LandMass.
+#C List the five countries that have the largest LandMass. JESSIE/THANDO
 def LandMass(dictionary):
     landMass = []  # List to store unique land masses
     count = 0
@@ -93,6 +98,8 @@ def LandMass(dictionary):
     top5 = sorted(landMass, reverse=True)[:5]
     print(top5)
     return count
+
+#LandMass(dictionary)
 
 #-------------------------------------------------------------------------------------------------------------
 
@@ -120,6 +127,8 @@ def count_countries_independent(dictionary):
 
     return yearcount
 
+count_countries_independent(dictionary)
+
 #-------------------------------------------------------------------------------------------------------------
 #E. Which countries gained independence between the years 1830 and 1850 (inclusive)?
 def name_countries_independent(dictionary):
@@ -145,7 +154,7 @@ def name_countries_independent(dictionary):
     print(f"Number of countries that gained independence between 1830 and 1850: {yearcount}")
     return yearcount
 
-#name_countries_independent(dictionary)
+name_countries_independent(dictionary)
 
 #-------------------------------------------------------------------------------------------------------------
 
@@ -164,7 +173,7 @@ def top(dictionary):
     print(top5)
     return count
 
-#top(dictionary)
+top(dictionary)
 #-------------------------------------------------------------------------------------------------------------
 
 #G Which are the 5 most commonly spoken languages in the world?
@@ -185,6 +194,7 @@ def lang(dictionary):
         print(f"Language: {lang}, Count: {count}")
 
     return top5
+lang(dictionary)
 
 #-------------------------------------------------------------------------------------------------------------
 
@@ -200,6 +210,8 @@ def count_countries_ending_with_a(dictionary):
 
     print(countryset)
     return list(countryset)
+
+count_countries_ending_with_a(dictionary)
 
 #-------------------------------------------------------------------------------------------------------------
 
